@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js的编写位置</title>
+    <!-- 
+        1.可以将js代码编写到网页内部的script标签中
+     -->
+    <!-- <script type="text/javascript">
+        alert("script标签中js代码");        
+    </script> -->
+
+    <!-- 
+        2.可以将js编写到外部的js文件中, 然后通过script标签进行引入
+            注意: script标签用来引入外部js文件之后内部不可以再编写js代码,
+                即使编写了js代码, 也会被浏览器所忽略
+     -->
+     <!-- <script src="./script/script.js"></script> -->
+</head>
+<body>
+    <!-- 
+        3.可以将js代码编写到指定的属性中
+     -->
+     <!-- 当鼠标点击按钮时执行后面的js代码 -->
+     <button onclick="alert('你点我干嘛');">点我一下</button>
+     <!-- 当鼠标经过按钮时执行后面的js代码 -->
+     <button onmousemove="alert('你又点我干嘛');">点我一下</button>
+     <hr>
+
+     <!-- 此时的超链接点击之后不发生跳转而是执行javascript:后面的js代码 -->
+     <a href="javascript: alert('超链接被点击了');">超链接</a>
+     <!-- 
+        由于超链接点击之后不发生跳转而是执行javascript:后面的js代码,
+            而javascript:后面没有js代码, 所以这个超链接点击之后什么都不会发生
+      -->
+     <a href="javascript:;">超链接</a>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js的编写位置</title>
+    <!-- 
+        1.可以将js代码编写到网页内部的script标签中
+     -->
+    <!-- <script type="text/javascript">
+        alert("script标签中js代码");        
+    </script> -->
+
+    <!-- 
+        2.可以将js编写到外部的js文件中, 然后通过script标签进行引入
+            注意: script标签用来引入外部js文件之后内部不可以再编写js代码,
+                即使编写了js代码, 也会被浏览器所忽略
+     -->
+     <!-- <script src="./script/script.js"></script> -->
+</head>
+<body>
+    <!-- 
+        3.可以将js代码编写到指定的属性中
+     -->
+     <!-- 当鼠标点击按钮时执行后面的js代码 -->
+     <button onclick="alert('你点我干嘛');">点我一下</button>
+     <!-- 当鼠标经过按钮时执行后面的js代码 -->
+     <button onmousemove="alert('你又点我干嘛');">点我一下</button>
+     <hr>
+
+     <!-- 此时的超链接点击之后不发生跳转而是执行javascript:后面的js代码 -->
+     <a href="javascript: alert('超链接被点击了');">超链接</a>
+     <!-- 
+        由于超链接点击之后不发生跳转而是执行javascript:后面的js代码,
+            而javascript:后面没有js代码, 所以这个超链接点击之后什么都不会发生
+      -->
+     <a href="javascript:;">超链接</a>
+</body>
+</html>
