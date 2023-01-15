@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换-字符串</title>
+    <script>
+        /* 
+            类型转换指将一种数据类型转换为其它类型
+                将其它类型转换为(常用)字符串、数值、布尔值
+
+            转换为字符串
+                调用toString()方法将其它类型转换为字符串
+                    - 调用x的y方法 -> x.y()
+                    - 由于null和undefined中没有toString()方法,
+                        所以对这两个东西调用toString()时会报错
+
+                    注意: 由于原始值是不可修改的, 所以转换的时候并没有修改值,
+                        而是根据当前类型的值去创建一个字符串型的值, 所以当创建完要重新为变量赋值
+        */
+        let a = 10;
+        // a = 11n;
+        // a = true;
+        // a = Symbol();
+        // a = null;
+        // a = undefined;
+
+        // console.log(a, typeof a);
+
+        // 调用a的toString()方法将其转换为字符串
+        // 实质上是根据数值10去创建一个字符串"10"
+        a = a.toString();
+
+        // console.log(a, typeof a);
+
+        /* 
+            调用String()函数将其它类型转换为字符串
+                - 调用x函数 -> x()
+                - 原理:
+                    - 对于拥有toString()方法的值调用String()函数时,
+                        实际上就是在调用toString()方法
+                    - 对于null, 则直接转换为"null"
+                    - 对于undefined, 则直接转换为"undefined"
+        */
+        let b = 33;
+        // b = 34n;
+        // b = false;
+        // b = Symbol();
+        // b = null;
+        // b = undefined;
+
+        console.log(b, typeof b);
+
+        // 调用String()函数将其转换为字符串
+        // 实质上是根据数值33去创建了一个字符串"33"
+        b = String(b);
+
+        console.log(b, typeof b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
