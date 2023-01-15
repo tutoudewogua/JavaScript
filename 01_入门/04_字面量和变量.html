@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字面量和变量</title>
+    <script>
+        /* 
+            1.字面量
+                - 字面量其实就是一个值, 它所代表的含义就是它字面的意思
+                - 比如: 1 2 3 4 100 "hello" true null...
+                - 在js中所有字面量都可以直接使用, 但是直接使用字面量并不方便 
+        */
+        // console.log(1);
+        // console.log(true);
+        // console.log("hello");
+        // console.log(a); a is not defined
+        // console.log(80);
+
+        /* 
+            2.变量
+                - 变量可以用来存储字面量
+                - 并且变量中存储的字面量可以随意的修改
+                - 通过变量可以对字面量进行描述, 并且变量比较方便修改
+        */
+        // 声明一个变量x
+        let x;
+        // 为变量x赋值
+        x = 80;
+        // 为变量x赋值
+        x = "变量x";
+
+        let age;
+        age = 80;
+        age = 81;
+
+        // console.log(age);
+
+        /* 
+            3.变量的使用
+                声明变量 -> let 变量名 / var 变量名
+                为变量赋值 -> 变量名 = xx
+                声明和赋值同时进行 -> let i = 100;
+        */
+        // 新方式
+        // 声明变量
+        let a;
+        let b, c, d;
+
+        // 旧方式
+        var e;
+        var f, g, h;
+
+        // 为变量赋值
+        a = 10;
+        a = "hello";
+        a = true;
+
+        // console.log(a);
+
+        // 声明和赋值同时进行
+        let i = 100;
+        console.log(i);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
