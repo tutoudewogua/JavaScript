@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一元的±</title>
+    <script>
+        /* 
+            一元的±
+                - 正号(+)
+                    - 不会改变数值的符号
+                - 负号(-)
+                    - 可以对数值进行符号位取反
+
+                - 当我们对非数值类型的值进行一元正负运算时, 会先将其转换为数值然后再进行运算,
+                - 可以利用这一特点完成类型转换
+                    可以通过为任意类型的值前面加一个 + 来将其转换为数值
+
+
+                
+        */
+        let a = -10;
+        a = +a;
+        a = -a;
+
+        // console.log(a);
+
+        let b = "123";
+        // b = Number(b);
+        // b = -b;
+
+        // 通过一元正运算完成类型转换
+        b = +b;
+
+        console.log(b, typeof b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
