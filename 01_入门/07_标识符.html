@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标识符</title>
+    <script>
+        /* 
+            在js中, 所有可以由我们自主命名的内容, 都可以认为是一个标识符
+                像变量名、函数名、类名...
+            使用标识符时需要遵循如下的命名规范:
+                1.标识符只能含有字母、数字、下划线、$、且不能以数字开头
+                2.标识符不能使js中的关键字和保留字, 也不建议使用内置的函数名或类名作为标识符(会发生覆盖)
+                3.命名规范:
+                    - 通常会使用驼峰命名法
+                        - 首字母小写, 每个单词开头字母大写
+                        - maxlength -> maxLength
+                        - borderleftwidth -> borderLeftWidthh
+                    - 类名会使用大驼峰命名法
+                        - 首字母大写, 每个单词开头字母大写
+                        - maxlength -> MaxLength
+                    - 常量的字母会全部大写
+                        maxlength -> MAX_LENGTH
+        */
+        let a = 10;
+        let abc123_$ = 22;
+        let _abc = 33;
+        let $bcd = 44;
+        // let @#@#abc = 55; // 报错, Invalid or unexpected token
+        // let let = 55; // 报错, let is disallowed as a lexically bound name
+
+        // 把浏览器内置的alert()函数覆盖了
+        let alert = 55;
+        alert(123); // alert is not a function
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
