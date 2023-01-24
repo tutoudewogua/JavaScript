@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while语句练习</title>
+    <script>
+        /* 
+            练习:
+                - 假设银行存款的年利率为5%，问1000块存多少年可以变成5000块
+        */
+        // 创建一个变量记录钱数
+        let money = 1000;
+        // 创建一个变量记录年数
+        let year = 0;
+        // 使用while语句计算年数
+        while(money <= 5000) {
+            // 存钱一年, 更新钱数
+            money *= 1.05;
+            // 年数加1
+            year++;
+        }
+        console.log(`1000块存${year}年可以变成${money}块`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
