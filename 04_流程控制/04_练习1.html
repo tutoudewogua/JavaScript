@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习1</title>
+    <script>
+        /* 
+            练习1:
+                - 编写一个程序, 获取一个用户输入的整数, 然后通过程序显示这个数是奇数还是偶数
+        */
+        // 获取用户输入的整数并将其转换为数值型
+        // let num = parseInt(prompt("请输入一个整数"));
+        let num = +prompt("请输入一个整数: ");
+
+        /* 
+            验证一下用户的输入是否合法, 只有是有效数字时才检查它是偶数还是奇数
+
+            由于NaN不和任何值相等, 包括它自身, 
+                所以不能使用==或===来检查一个值是否是NaN,
+                可以使用isNaN()函数来检查一个值是否是NaN
+
+            整数对1取模恒等于0,
+                可以利用这点检查一个数是否是整数
+        */
+        // if(num === NaN) {
+        //     alert(`${num}是NaN`);
+        // }
+        // 如果用户输入的数值是非法数值或小数
+        if(isNaN(num) || num % 1 !== 0) {
+            // 数值不合法
+            alert("你的输入有问题, 请输入整数");
+        } else {
+            // 数值合法
+            // 如果数值对2取模等于0
+            if(num % 2 === 0) {
+                // 数值为偶数
+                alert(`${num}是偶数`);
+            } else {
+                // 数值为奇数
+                alert(`${num}是奇数`);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
