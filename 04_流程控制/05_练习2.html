@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习2</title>
+    <script>
+        /* 
+            练习2:
+                - 从键盘输入小明的期末成绩,
+                    当成绩为100时, "奖励一辆BMW"
+                    当成绩为[80-99]时, "奖励一台iPhone"
+                    当成绩为[60-79]时, "奖励一本参考书"
+                    其它时, 什么奖励也没有
+        */
+        // 获取用户输入的小明的成绩并转换为数值型
+        let score = +prompt("请输入小明的期末成绩: ");
+
+        // 如果用户输入的成绩是NaN或大于100或小于0
+        if(isNaN(score) || score > 100 || score < 0) {
+            // 数值不合法
+            alert("请输入合法的成绩");
+        } else {
+            // 数值合法
+            // 如果成绩等于100
+            if(score === 100) {
+                // 成绩为100
+                alert("BMW一辆");
+            } else if(score >= 80) {
+                // 成绩为[80-99]
+                alert("iPhone一台");
+            } else if(score >= 60) {
+                // 成绩为[60-79]
+                alert("参考书一本");
+            } else {
+                // 成绩为其他
+                alert("继续加油");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
