@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for语句</title>
+    <script>
+        /* 
+            for语句
+                - for语句和while语句没有本质的区别, 都是用来反复执行代码,
+                    不同点就是语法结构, for语句更加清晰
+                - 语法:
+                    for(初始化表达式; 条件表达式; 更新表达式) {
+                        语句...
+                    }
+                - 执行流程:
+                    1.执行初始化表达式, 初始化变量
+                    2.执行条件表达式, 判断循环是否执行(true执行, false终止)
+                    3.判断结果为true, 则执行循环体
+                    4.执行更新表达式, 对初始变量进行更新
+                    5.重复2, 直到判断为false为止
+                - 注意:
+                    - 初始化表达式, 在循环的整个生命周期中只会执行1次
+                    - for语句三个表达式都可以省略
+                    - 使用let关键字在for语句的()声明的变量是局部变量, 只能在for语句内部访问,
+                        使用var关键字在for语句的()声明的变量可以在for语句外部访问
+                - 创建死循环的方式
+                    - while(1) {}
+                    - for(;;) {}
+        */
+        // while语句三个表达式是分开写的
+        // let i = 0;
+        // while(i < 5) {
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // for语句三个表达式写在一起, 结构清晰
+        // for(let i = 0; i < 5; i++) {
+        //     console.log(i);
+        // }
+        // let关键字在for语句的()声明的变量具有块级作用域, 外部访问不到
+        // console.log(i); // i is not defined
+        // for(var i = 0; i < 5; i++) {
+        //     console.log(i);
+        // }
+        // var关键字在for语句的()声明的变量不具有块级作用域
+        // console.log(i);
+
+        // 死循环
+        // for(;;) {}
+        // while(1) {}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
