@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环嵌套练习2</title>
+    <script>
+        /* 
+            练习:
+                - 编写代码, 求100以内所有的质数
+        */
+        // 外层循环用来遍历100以内的数(2-100)
+        for(let i = 2; i <= 100; i++) {
+            // 创建变量标识i是否是质数
+            // true -> 质数
+            // false -> 不是质数
+            let flag = true;
+            // 内层循环用来遍历1-i之间的数(2 ~ i-1)
+            for(let j = 2; j < i; j++) {
+                // 如果i能被1-i之间的某个数整除
+                if(i % j === 0) {
+                    // i不是质数
+                    flag = false;
+                }
+            }
+            // 如果标识为true
+            if(flag) {
+                // i是质数
+                console.log(`${i}是质数`);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
