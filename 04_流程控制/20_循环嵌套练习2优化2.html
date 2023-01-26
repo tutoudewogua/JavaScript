@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环嵌套练习2优化2</title>
+    <script>
+        /* 
+            优化前:
+                1.10000以内: 240ms
+                2.100000以内: 21739ms
+
+            第一次优化:
+                1.10000以内: 28ms
+                2.100000以内: 1833ms
+                3.1000000以内: 141625ms
+
+            第二次优化:
+                1.10000以内: 4ms
+                2.100000以内: 19ms
+                3.1000000以内: 300ms
+
+            问题:
+                如何修改代码, 提升其性能
+
+                36的因数
+                1 36
+                2 18
+                3 12
+                4 9
+                6 6
+        */
+        // 开始一个计时器
+        console.time("质数练习");
+        // 偶数里除了2以外其它不可能是质数, 因为它们必有2这个因数
+        for(let i = 2; i <= 1000000; i += 2) {
+            let flag = true;
+            // 因数只找到它开方的位置即可, 后续的因数都是重复的
+            // 4只有2这个因数
+            for(let j = 2; j <= i ** .5; j++) {
+                if(i % j === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag) {
+                /* 
+                    打印操作是必须操作, 必须操作是无法优化的,
+                        所以优化时可以暂时把这个代码忽略
+                */
+                // console.log(`${i}是质数`);
+            }
+            
+            // 2判断完之后将i修改为1, 这样后面判断的数必然是奇数
+            if(i === 2) {
+                i = 1;
+            }
+        }
+        console.timeEnd("质数练习");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
