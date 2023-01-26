@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环嵌套练习1</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+    <script>
+        /* 
+            练习: 
+                在网页中打印99乘法表
+                1x1=1                  j<2  i=1
+                1x2=2 2x2=4            j<3  i=2 
+                1x3=3 2x3=6 3x3=9      j<4  i=3 -> j<i+1
+                ......
+                                9x9=81 j<10 i=9 
+        */
+        // 外层循环控制乘法表的高度
+        for(let i = 1; i <= 9; i++) {
+            // 内层循环控制乘法表的宽度
+            for(let j = 1; j < i + 1; j++) {
+                document.write(`<span>${j}×${i}=${j * i}</span>`);
+            }
+            document.write("<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
