@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环嵌套练习2优化1</title>
+    <script>
+        /* 
+            优化前:
+                1.10000以内: 240ms
+                2.100000以内: 21739ms
+
+            第一次优化:
+                1.10000以内: 28ms
+                2.100000以内: 1833ms
+
+            问题:
+                如何修改代码, 提升其性能
+        */
+        // 开始一个计时器
+        console.time("质数练习");
+        for(let i = 2; i <= 100000; i++) {
+            let flag = true;
+            for(let j = 2; j < i; j++) {
+                if(i % j === 0) {
+                    flag = false;
+                    // 进入判断说明i一定不是质数, 无需进行后续检查
+                    break;
+
+                }
+            }
+            if(flag) {
+                /* 
+                    打印操作是必须操作, 必须操作是无法优化的,
+                        所以优化时可以暂时把这个代码忽略
+                */
+                // console.log(`${i}是质数`);
+            }
+        }
+        // 停止开始的计时器, 并在控制台打印计时器记录的时间(ms)
+        console.timeEnd("质数练习");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
