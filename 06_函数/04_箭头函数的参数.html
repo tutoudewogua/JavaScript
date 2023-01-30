@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数的参数</title>
+    <script>
+        /* 
+            箭头函数的参数
+                - 当箭头函数只有一个参数时, 可以省略()
+        */
+        const fn = (a, b) => {
+            console.log("a =", a);
+            console.log("b =", b);
+        }
+        // fn(1, 1);
+
+        const fn2 = a => {
+            console.log("a =", a);
+        }
+        // fn2(123);
+
+        /* 
+            在定义函数的形参时, 可以为形参指定默认值,
+                默认值会在没有对应实参时生效
+        */
+        const fn3 = (a = 10, b = 20, c = 30) => {
+            console.log("a =", a);
+            console.log("b =", b);
+            console.log("c =", c);
+        }
+        fn3(1, 2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
