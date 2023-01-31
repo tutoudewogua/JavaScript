@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数的返回值</title>
+    <script>
+        /* 
+            - 箭头函数的返回值可以直接写在箭头后面(只有一条语句时)
+
+            - 如果直接在箭头后设置对象字面量作为返回值时, 由于对象字面量也有大括号, 
+                会和函数体发生混淆, 所以对象字面量必须使用()括起来,
+        */
+        // const sum = (a, b) => {
+        //     return a + b;
+        // }
+
+        // 只有一条语句时可以省略大括号和return关键字
+        const sum = (a, b) => a + b;
+
+        // 返回对象字面量时, 要用括号括起来
+        const fn = () => ({ name: "孙悟空" });
+
+        let result = sum(123, 456);
+        result = fn();
+
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
