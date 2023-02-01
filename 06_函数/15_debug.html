@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debug</title>
+    <script>
+        /* 
+            使用debugger可以在代码中打断点, 当代码运行到断点的位置时会停止向下运行
+        */
+        // debugger; 
+
+        console.log(a); // f a() { alert(3); }
+        // var a只有第一个生效后面的重复声明不生效
+        var a = 1;
+        console.log(a); // 1
+        // function是给a赋值, 后声明function会覆盖前声明function的值
+        function a() { alert(2); }
+        function a() { alert(3); }
+        console.log(a); // 1
+        var a = 4;
+        console.log(a); // 4
+        var a = function () { alert(5); }
+        console.log(a); // f () { alert(5); }
+        var a;
+        console.log(a); // f () { alert(5); }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
