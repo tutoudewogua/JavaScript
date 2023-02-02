@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类</title>
+    <script>
+        /* 
+            使用Object创建对象的问题:
+                1.无法区分不同类型的对象(人和狗)
+                2.不方便批量创建对象(创建多个人)
+        */
+        const xiaodan = {
+            name: "晓丹",
+            age: 23,
+            height: 160,
+            weight: 50,
+            sleep() {
+                console.log(this.name + "睡觉了");
+            },
+            eat() {
+                console.log(this.name + "吃饭了");
+            },
+        }
+        const yellow = {
+            name: "大黄",
+            age: 3,
+            sleep() {
+                console.log(this.name + "睡觉了");
+            },
+            eat() {
+                console.log(this.name + "吃饭了");
+            },
+        }
+
+        // console.log(xiaodan);
+        // console.log(yellow);
+
+        /* 
+            在js中可以通过类(class)来解决这个问题:
+                - 类是对象模板, 可以将对象中的属性和方法直接定义在类中,
+                    定义后, 就可以通过类来创建对象
+                - 通过同一个类创建的对象, 称为同类对象
+                    - 可以通过instanceof来检查一个对象是否是由某个类创建的,
+                        如果某个对象是由某个类所创建的, 则称该对象是这个类的实例
+
+                - 语法:
+                    class 类名 {}
+                    const 类名 = class {}
+                    - 类名要使用大驼峰命名法
+
+                - 通过类创建实例:
+                    const 实例名称 = new 类名()
+        */
+        // 创建Person类用来创建人的实例
+        class Person {}
+
+        // 创建Dog类用来创建狗的实例
+        class Dog {}
+
+        // 调用构造函数创建实例
+        const p1 = new Person();
+        const p2 = new Person();
+        const d1 = new Dog();
+        const d2 = new Dog();
+
+        // console.log(Person);
+        // console.log(p1);
+        // console.log(d1);
+        // console.log(p1 instanceof Person);
+        // console.log(p2 instanceof Person);
+        // console.log(d1 instanceof Person);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
