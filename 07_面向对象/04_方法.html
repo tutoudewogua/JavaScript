@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方法</title>
+    <script>
+        class Person {
+            name = "孙悟空";
+
+            /* 
+                - 实例方法直接在类的代码块里设置即可
+                    - 添加实例方法有两种方式:
+                        1.方法名 = function() {
+                            语句...
+                        }
+                            - 这种方式添加的方法存储在实例中
+                        2.方法名() {
+                            语句...
+                        }
+                            - 这种方式添加的方法存储在原型中
+
+                    - 注意:
+                        - 实例方法只能通过实例调用
+                        - 实例方法中的this是当前实例
+
+                - 静态方法(类方法), 使用static在类的代码块里声明
+                    - 注意:
+                        - 静态方法只能通过类来调用
+                        - 静态方法中的this是当前类
+            */
+
+            // 添加实例方法
+            sayHelle() {
+                // this是当前实例
+                console.log("大家好, 我是" + this.name);
+            }
+
+            // 添加静态方法
+            static test() {
+                console.log("我是静态方法", this);
+            }
+        }
+
+        const person = new Person();
+
+        // console.log(person);
+        // person.sayHelle();
+        Person.test();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
