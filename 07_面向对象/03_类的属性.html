@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类的属性</title>
+    <script>
+        // 类是创建对象的模板, 创建对象的第一件事就是定义类
+        class Person {
+            /* 
+                - 类的代码块, 默认就是严格模式,
+                    因为类的代码块是用来设置对象的属性的, 不是什么代码都能写
+
+                - 实例属性直接在类的代码块里直接设置即可
+                    - 注意: 实例属性只能通过实例去访问
+
+                - 使用static声明的属性是静态属性(类属性)
+                    - 注意: 静态属性只能通过类去访问
+            */
+            
+            // 设置实例属性
+            name = "孙悟空";
+            age = 18;
+
+            // 设置静态属性
+            static test = "test静态属性";
+            static hh = "hh静态属性";
+        }
+
+        const p1 = new Person();
+        const p2 = new Person();
+
+        console.log(p1);
+        console.log(p2);
+        console.log(Person.test);
+        console.log(Person.hh);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
