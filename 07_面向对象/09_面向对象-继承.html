@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象-继承</title>
+    <script>
+        /* 
+            继承:
+                - 通过继承可以在不修改一个类的前提下对其进行扩展
+                    - 在子类中可以重写构造函数, 但是要注意两点:
+                        1.必须在构造函数中调用super()
+                            - super()是用来调用父类的构造函数的
+                        2.this必须写在super()之后
+                            - 子类没有自己的this, this是由super()调用所产生的父类的this
+                    - 在子类中, 可以通过创建同名方法来重写父类中的方法
+                    - 在子类的方法中, 可以使用super来引用父类中的方法
+
+                - OCP 开闭原则
+                    - 程序应该对修改关闭, 对扩展开放
+        */
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayHello() {
+                console.log("动物在叫");
+            }
+        }
+        class Dog extends Animal {
+            // 重写父类的方法
+            sayHello() {
+                console.log("汪汪汪");
+            }
+        }
+        class Cat extends Animal {
+            // 重写构造函数
+            constructor(name, age) {
+                // 使用super()调用父类的构造函数
+                super(name);
+                this.age = age;
+            }
+
+            sayHello() {
+                // 通过super引用父类的方法
+                super.sayHello();
+                console.log("喵喵喵");
+            }
+        }
+
+        const dog = new Dog("旺财");
+        const cat = new Cat("汤姆", 18);
+
+        console.log(dog);
+        dog.sayHello();
+        console.log(cat);
+        cat.sayHello();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
